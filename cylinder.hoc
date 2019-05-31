@@ -1,0 +1,56 @@
+xopen("$(NEURONHOME)/lib/hoc/noload.hoc")
+{pwman_place(0,20)}
+ndend=1
+create soma, hillock, axon, dend[ndend]
+
+
+access soma
+{diam=70  L=50 nseg=10} // area 100 um2 means mA/cm2 identical to nA 
+insert B_Na
+insert B_A
+insert B_DR
+insert pas
+
+access hillock
+{L=15 nseg=30 dsoma=13 daxon=3.5 diam(0:1)=dsoma:daxon}
+insert B_Na
+insert B_A
+insert B_DR
+insert pas
+
+access axon
+{diam=3.5 L=25 nseg=50}
+insert B_Na
+insert B_A
+insert B_DR
+insert pas
+
+for i=0, ndend-1 dend[i] {
+	nseg=50
+	diam=35
+	diam(0.43:1) = 35:0  // tapering of the distal dendrite
+	L=7000
+insert B_Na
+insert B_DR	
+insert pas
+}
+
+soma connect hillock(0),1
+hillock connect axon(0),1
+for i=0,ndend-1 soma connect dend[i](0),0 
+
+{
+load_file("electrod.hoc")
+//load_template("Electrode")
+//load_template("MenuExplore")
+//load_template("PointProcessLocator")
+//load_template("ShowMechanism")
+//load_template("Inserter")
+//load_template("PointProcessManager")
+//load_proc("nrnmainmenu")
+
+
+//xopen("$(NEURONHOME)/Demo/b1/0-cylinder-taper.ses")
+xopen("0-cylinder-taper.ses")
+forall Ra=80
+}

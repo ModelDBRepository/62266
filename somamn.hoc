@@ -1,0 +1,17 @@
+xopen("$(NEURONHOME)/lib/hoc/noload.hoc")
+{pwman_place(0,20)}
+create soma
+access soma
+{diam=10  L=10} // area 100 um2 means mA/cm2 identical to nA 
+{
+load_file("electrod.hoc")
+//load_template("Inserter")
+//load_template("PointProcessManager")
+//load_proc("nrnmainmenu")
+//nrnmainmenu()
+//makeinserter()
+//makeppm()
+//xopen("$(NEURONHOME)/Demo/b1/motoneurone.ses")
+xopen("motoneurone.ses")
+forall Ra=200
+}
