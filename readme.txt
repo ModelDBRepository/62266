@@ -2,14 +2,14 @@ Readme.txt for the model code associated with the paper:
 
 Safronov BV, Wolff M, Vogel W
 Excitability of the Soma in Central Nervous System Neurons
-Biophysical Journal Volume 78 June 2000 2998ñ3010
+Biophysical Journal Volume 78 June 2000 2998‚Äì3010
 
 ABSTRACT
 
 The ability of the soma of a spinal dorsal horn neuron, a spinal ventral 
 horn neuron (presumably a motoneuron), and a hippocampal pyramidal neuron to 
 generate action potentials was studied using patch-clamp recordings from rat spinal
-cord slices, the ìentire soma isolationî method, and computer simulations. By 
+cord slices, the ‚Äúentire soma isolation‚Äù method, and computer simulations. By 
 comparing original recordings from an isolated soma of a dorsal horn neuron with 
 simulated responses, it was shown that computer models can be adequate for the study
 of somatic excitability. The modeled somata of both spinal neurons were unable to 
